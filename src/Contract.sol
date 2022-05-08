@@ -15,5 +15,6 @@ contract BankApp {
         (bool success, ) = msg.sender.call{value: balance}("");
         require(success, "Failed to send");
         balances[msg.sender] = 0;
+        
     }
 }
